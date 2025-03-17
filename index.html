@@ -54,7 +54,7 @@
             <th style="position: relative;">{% if has_bionano %}
                 <div class="rounded" style="position: absolute; left: -20px; top: -5px; background-color: rgb(255, 0, 0); color: white; width: 60px; font-size: 12px; text-align: center;">Bionano</div>
                 {% endif %}
-            <a href="{{ species.url }}"><img src="{{ species.image }}" alt="{{ species.common_name }}" style="width:100%;" class="rounded"></a>
+            <a href="{{ species.url | relative_url }}"><img src="{{ species.image }}" alt="{{ species.common_name }}" style="width:100%;" class="rounded"></a>
             </th>
             <th style="font-size: 30px; padding-top: 4%; text-align: center;">{{species.common_name}} (<i>{{ species.name }}</i>)</th>
             <th>{{species.family.name}}</th>
