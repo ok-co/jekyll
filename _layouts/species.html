@@ -63,7 +63,7 @@
 </head>
 <body>
     <div class="sidebar">
-        <h1><a href="/" >Main Page</a></h1>
+        <h1><a href="/jekyll" >Main Page</a></h1>
         <h3>Table of contents</h3>
         <a href="#taxonomy">Taxonomy</a>
         <a href="#sequenced-resources">Sequences</a>
@@ -71,7 +71,7 @@
     </div>
     <div class="content">
         <h1 class="section-header">{{ page.common_name }} (<i>{{ page.name }}</i>)</h1>
-        <img src="{{ page.image }}" alt="{{ page.common_name }}" class="species-image rounded">
+        <img src="{{ page.image | relative_url  }}" alt="{{ page.common_name }}" class="species-image rounded">
         <section id="taxonomy">
             <h2 class="section-header">Taxonomy</h2>
             <p>Family: {{ page.family.name }}</p>
@@ -106,9 +106,9 @@
         </section>
     </div>
     <div class="socials">
-        <a href="https://facebook.com" target="_blank"><img src="/assets/img/facebook-icon.png" alt="Facebook" style="width: 25px;"></a>
-        <a href="https://x.com" target="_blank"><img src="/assets/img/x-icon.jpg" alt="X" style="width: 25px;"></a>
-        <a href="https://reddit.com" target="_blank"><img src="/assets/img/reddit0con.svg" alt="Reddit" style="width: 75px;"></a>
+        <a href="https://facebook.com" target="_blank"><img src={{"/assets/img/facebook-icon.png" | relative_url }} alt="Facebook" style="width: 25px;"></a>
+        <a href="https://x.com" target="_blank"><img src={{"/assets/img/x-icon.jpg" | relative_url }} alt="X" style="width: 25px;"></a>
+        <a href="https://reddit.com" target="_blank"><img src={{"/assets/img/reddit0con.svg" | relative_url }} alt="Reddit" style="width: 75px;"></a>
     </div>
 </body>
 </html>
