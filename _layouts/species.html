@@ -59,6 +59,16 @@
             right: 20px;
             width: 200px;
         }
+        .section-header::before,
+        .section-header::after
+        {
+            content: "";
+            display: inline-block;
+            height: 3px;
+            position: relative;
+            vertical-align: middle;
+            width: 50%;
+        }
     </style>
 </head>
 <body>
@@ -95,7 +105,7 @@
                     <td>{{ sample.bases }}</td>
                     <td>{{ sample.coverage }}</td>
                     <td>{{ sample.bytes }}</td>
-                    <td><a href="{{ sample.url }}" target="_blank"><img src={{"/assets/img/trollface.png" | relative_url }} alt="Link" style="width: 10px;"></a></td>
+                    <td><a href="{{ sample.url }}" target="_blank"><img src={{"/assets/img/trollface.png" | relative_url }} alt="Link" style="width: 25px;"></a></td>
                 </tr>
                 {% endfor %}
             </table>
